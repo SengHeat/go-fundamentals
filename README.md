@@ -1,25 +1,38 @@
 # Go Fundamentals
 
-My personal Go learning repository — from zero to production patterns.
+My Go learning repo — tracking progress from zero to production.
 
-## Structure
+## Progress
 
-| Folder | Topics |
-|--------|--------|
-| 01-types-and-variables | Primitives, slices, maps, zero values |
-| 02-control-flow | Loops, functions, defer, panic |
-| 03-structs-and-oop | Structs, interfaces, embedding |
-| 04-concurrency | Goroutines, channels, select, context |
-| 05-design-patterns | Singleton, Factory, Strategy, Observer, Middleware |
-| 06-error-handling | errors.Is, As, wrapping, custom errors |
-| 07-real-projects | CLI, REST API, worker pool |
+| # | Chapter | Status | Updated |
+|---|---------|--------|---------|
+| 01 | Types & Variables | ✅ Done | 2025-04-24 |
+| 02 | Control Flow | ✅ Done | 2025-04-24 |
+| 03 | Structs & OOP | 🔄 In Progress | 2025-04-24 |
+| 04 | Concurrency | ⏳ Pending | - |
+| 05 | Design Patterns | ⏳ Pending | - |
+| 06 | Error Handling | ⏳ Pending | - |
+| 07 | Real Projects | ⏳ Pending | - |
 
-## How to run any file
+Legend: ✅ Done | 🔄 In Progress | ⏳ Pending
 
-go run 01-types-and-variables/01_hello_world.go
+## What I learned today
+> Session: 2025-04-24
+- zero values — every type has a safe default
+- interfaces satisfied implicitly — no implements keyword
+- WaitGroup must be passed as pointer
 
-## Resources
+## Key gotchas
 
-- [Go Tour](https://tour.golang.org)
-- [Go by Example](https://gobyexample.com)
-- [Effective Go](https://golang.org/doc/effective_go)
+| Mistake | Fix |
+|---------|-----|
+| Copied WaitGroup by value | Pass *WaitGroup |
+| Closed channel from receiver | Only sender closes |
+| Type switch wrong order | Concrete before interface |
+
+## Run any file
+
+```bash
+go run 01-types-variables/01_hello_world.go
+go test ./...
+```
