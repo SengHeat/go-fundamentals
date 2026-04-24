@@ -1,0 +1,8 @@
+# Binaries
+*.exe
+*.out
+/bin/
+
+# Go test cache
+*.test
+*.prof
