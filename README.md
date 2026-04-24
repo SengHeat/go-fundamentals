@@ -31,8 +31,33 @@ Legend: ✅ Done | 🔄 In Progress | ⏳ Pending
 | Type switch wrong order | Concrete before interface |
 
 ## Run any file
+### Run any file for Type and Variable
+```bash
+go run 01-types-and-variables/01_hello_world.go
+```
 
 ```bash
-go run 01-types-variables/01_hello_world.go
-go test ./...
+go run 01-types-and-variables/02_variables.go
+```
+
+```bash
+go run 01-types-and-variables/03_primitives.go
+```
+
+```bash
+go run 01-types-and-variables/04_slices_maps.go
+```
+
+### Run any file for Control Flow
+
+```bash
+go run 02-control-flow/01_loops.go
+```
+
+```bash
+go run 02-control-flow/02_functions.go
+```
+
+```bash
+go run 02-control-flow/03_defer_panic.go
 ```
